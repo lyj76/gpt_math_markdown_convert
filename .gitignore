@@ -1,0 +1,17 @@
+﻿# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Local test outputs
+*_converted.md
+*_fixed*.md
+test_out.md
+
+# IDE
+.vscode/
+.idea/

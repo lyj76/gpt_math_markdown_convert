@@ -1,0 +1,17 @@
+﻿[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpt-math-markdown-convert"
+version = "0.1.0"
+description = "Convert math-like markdown snippets into safer KaTeX-friendly markdown"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "gpt_math_markdown_convert" }]
+
+[project.scripts]
+math-md-convert = "tr:main"
+
+[tool.setuptools]
+py-modules = ["tr"]
