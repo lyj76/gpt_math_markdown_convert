@@ -14,6 +14,49 @@ Typical broken input often causes errors like:
 
 This project normalizes math-like snippets into safer Markdown math blocks/inline syntax.
 
+## Before vs After
+
+### Case 1: Broken inline math inside display math
+
+Before:
+![alt text](image.png)
+
+After:
+![alt text](image-1.png)
+
+
+### Case 2: Broken ideal notation
+
+Before:
+```markdown
+$$
+I(S)=$x, y$
+$$
+```
+
+After:
+```markdown
+$$
+I(S)=(x, y)
+$$
+```
+
+### Case 3: Bracket-style block converted to standard math block
+
+Before:
+```markdown
+[
+k[x_1,\dots,x_n]
+]
+```
+
+After:
+```markdown
+$$
+k[x_1, \dots, x_n]
+$$
+```
+
 ## Features
 - Convert standalone `[ ... ]` blocks into `$$ ... $$`
 - Convert selected inline `( ... )` expressions into `$...$`
